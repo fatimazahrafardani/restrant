@@ -36,6 +36,7 @@
   </template>
   
   <script>
+    import axios from 'axios';
   export default {
     name: "SignUpForm",
     data() {
@@ -45,11 +46,14 @@
       };
     },
     methods: {
-      handleSubmit() {
-        console.log("Form submitted with:", {
+   async  handleSubmit() {
+        let result = axios.post('http://localhost:3000/users',{
           email: this.email,
           password: this.password,
-        });
+
+        })
+          console.warn(result)
+        
       },
     },
   };
