@@ -1,17 +1,18 @@
 <template>
   <div class="min-h-screen flex items-center justify-center bg-gray-100">
-    <SingUpForm />
+    <router-view/>
+    <!-- <SingUpForm /> -->
   </div>
 </template>
 
 <script>
-import SingUpForm from "./components/SingUpForm.vue";
+// import SingUpForm from "./components/SingUpForm.vue";
 
 export default {
   name: "App",
-  components: {
-    SingUpForm,
-  },
+  // components: {
+  //   SingUpForm,
+  // },
 };
 </script>
 

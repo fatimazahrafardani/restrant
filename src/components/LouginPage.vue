@@ -2,10 +2,10 @@
     <div class="flex-container">
       <div class="form-container">
         <img src="../assets/pngo.png" alt="Logo" class="logo" />
-        <h1 class="title">Sign Up</h1>
-        <form @submit.prevent="handleSubmit">
+        <h1 class="title">Login</h1>
+        <form @submit.prevent="login">
           <div class="input-container">
-            <label class="label">Email</label>
+            <label for="email" class="label">Email</label>
             <input
               type="email"
               v-model="email"
@@ -15,7 +15,7 @@
             />
           </div>
           <div class="input-container">
-            <label class="label">Password</label>
+            <label for="password" class="label">Password</label>
             <input
               type="password"
               v-model="password"
@@ -24,58 +24,49 @@
               required
             />
           </div>
-          <button
-            type="submit"
-            class="submit-btn"
-          >
-            Sign Up
-          </button>
-          
+          <button type="submit" class="submit-btn">Login</button>
         </form>
+        <p v-if="error" class="error-message">{{ error }}</p>
         <br>
         <p>
-            <router-link to="/login">login</router-link>
-          </p>
+          <router-link to="/signup">Sign Up</router-link>
+        </p>
       </div>
     </div>
   </template>
   
   <script>
-    import axios from 'axios';
+  import axios from 'axios';
   export default {
-    name: "SignUpForm",
     data() {
       return {
-        email: "",
-        password: "",
+        email: '',
+        password: '',
+        error: ''
       };
     },
     methods: {
-   async  handleSubmit() {
-        let result = axios.post('http://localhost:3000/users',{
-          email: this.email,
-          password: this.password,
-
-        })
-          console.warn(result)
-          if((await result).status == 201){
-            localStorage.setItem("user data",JSON.stringify((await result).data))
-            this.$router.push({name:'home'})
+      async login() {
+        try {
+          const result = await axios.get(
+            `http://localhost:3000/users?email=${this.email}&password=${this.password}`
+          );
+          if (result.status === 200 && result.data.length > 0) {
+            localStorage.setItem('token', result.data[0].token);
+            this.$router.push({ name: 'home' });
+            this.error = '';
+          } else {
+            this.error = 'Invalid credentials. Please try again.';
           }
-        
-      },
-    },
-    mounted(){
-      let userData = localStorage.getItem("user data")
-      if(userData){
-        this.$router.push({name:'home'})
+        } catch (error) {
+          this.error = 'An error occurred. Please try again later.';
         }
+      }
     }
   };
   </script>
   
-  <style>
-  /* Global styles */
+  <style scoped>
   * {
     margin: 0;
     padding: 0;
