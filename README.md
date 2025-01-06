@@ -32,19 +32,7 @@ npm install
 npm run dev
 ```
 
-## 📂 Project Structure
-```
-├── public
-├── src
-│   ├── assets
-│   ├── components
-│   ├── router
-│   ├── store
-│   ├── views
-│   └── main.js
-├── package.json
-└── README.md
-```
+
 
 ## ✅ Usage Instructions
 1. **Login/Register:** Admin can log in to manage the restaurant.
