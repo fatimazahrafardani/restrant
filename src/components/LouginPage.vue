@@ -29,7 +29,9 @@
         <p v-if="error" class="error-message">{{ error }}</p>
         <br>
         <p>
-          <router-link to="/signup">Sign Up</router-link>
+          <router-link to="/singup">Sign Up</router-link>
+
+
         </p>
       </div>
     </div>
