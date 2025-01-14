@@ -34,6 +34,23 @@
       "id": "a04b",
       "email": "fati@gmail.com",
       "password": "0534"
+    },
+    {
+      "id": "b128",
+      "email": "fatifardani@gmail.com",
+      "password": "fati123456"
+    }
+  ],
+  "restrant": [
+    {
+      "id": "d6dc",
+      "contact": "0999888"
+    },
+    {
+      "id": "2fa4",
+      "name": "Restraunooo",
+      "contact": "hhh",
+      "address": "temara"
     }
   ]
 }

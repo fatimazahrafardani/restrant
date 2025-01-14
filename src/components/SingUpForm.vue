@@ -57,7 +57,7 @@
           password: this.password,
 
         })
-          console.warn(result)
+        
           if((await result).status == 201){
             localStorage.setItem("user data",JSON.stringify((await result).data))
             this.$router.push({name:'home'})

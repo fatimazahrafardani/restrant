@@ -74,7 +74,8 @@ Contributions are welcome! Please follow these steps:
 ## 📄 License
 This project is licensed under the MIT License.
 
----
+---run json serve
+**json-server --watch api.json**
 
 **Developed by Fatima Zahra Fardani**
 

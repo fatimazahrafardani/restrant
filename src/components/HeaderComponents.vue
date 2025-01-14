@@ -1,15 +1,15 @@
 <template>
     <header class="header">
         <div class="logo-container">
-            <img src="../assets/logo.png" alt="Restaurant Logo" class="logo">
+            <img src="../assets/pngo.png" alt="Restaurant Logo" class="logo">
             <h1 class="title">Restaurant Management</h1>
         </div>
         <nav class="nav-bar">
             <router-link to="/" class="nav-link">Home</router-link>
-            <router-link to="/menu" class="nav-link">Menu</router-link>
-            <router-link to="/reservations" class="nav-link">Reservations</router-link>
-            <router-link to="/orders" class="nav-link">Orders</router-link>
-            <router-link to="/contact" class="nav-link">Contact</router-link>
+            <router-link to="/singup" class="nav-link">Singup</router-link>
+            <router-link to="/login" class="nav-link">Login</router-link>
+            <router-link to="/addrest" class="nav-link">AddRestrant</router-link>
+            <router-link to="/updaterest" class="nav-link">UpdateRestrant</router-link>
             <a v-on:click="lougout"  href="#">Lougout</a>
         </nav>
     </header>
