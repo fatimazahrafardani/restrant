@@ -77,7 +77,7 @@
   
   body {
     font-family: Arial, sans-serif;
-    background-color: #f7fafc;
+
   }
   
   .flex-container {
@@ -88,7 +88,7 @@
   }
   
   .form-container {
-    background-color: #fff;
+  
     padding: 32px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);

@@ -1,47 +1,22 @@
 <template>
-  <div class="home">
+  
+  <div class="home" >
+   <img src="/src/assets/ana.jpg" alt=""> 
     <HeaderComponents/>
     <header>
       <h1>Welcome to My Home Page</h1>
       <p>This is a simple Vue.js home component template.</p>
     </header>
 
-    <!-- Display the list of restaurants in a table -->
-    <section>
-      <h2>Restaurant List</h2>
-      <table v-if="restaurants.length">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Address</th>
-            <th>Contact</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="(restaurant) in restaurants" :key="restaurant.id">
-            <td>{{ restaurant.id }}</td>
-            <td>{{ restaurant.name }}</td>
-            <td>{{ restaurant.address }}</td>
-            <td>{{ restaurant.contact }}</td>
-            <td>
-              <router-link :to="`/updaterest/${restaurant.id}`">Update here</router-link>
-              <button @click="deleteRestaurant(restaurant.id)">Delete here</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <p v-else>No restaurants available.</p>
-    </section>
-
-    <footer>
+   
+    <footer class="footer">
       <p>&copy; 2025 Fatima Zahra Fardani. All rights reserved.</p>
     </footer>
   </div>
 </template>
 
 <script>
+// Import statements remain unchanged
 import axios from 'axios';
 import HeaderComponents from './HeaderComponents.vue';
 
@@ -57,7 +32,6 @@ export default {
   },
  
   methods: {
-    // ✅ Fixed delete method with data reload
     async deleteRestaurant(id) {
       try {
         await axios.delete(`http://localhost:3000/restrant/${id}`);
@@ -69,7 +43,6 @@ export default {
       }
     },
 
-    // ✅ Corrected loaddata method
     async loaddata() {
       let userData = localStorage.getItem("user data");
       if (!userData) {
@@ -85,7 +58,6 @@ export default {
     }
   },
 
-  // ✅ Ensure data is loaded when the component is mounted
   async mounted() {
     await this.loaddata();
   }
@@ -93,6 +65,24 @@ export default {
 </script>
 
 <style scoped>
+.home {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  min-height: 100vh; /* Ensure it takes at least full viewport height */
+  
+
+}
+
+header {
+  flex: 2; /* Allow header to grow and take available space */
+}
+
+.footer {
+  text-align: center; /* Center text in footer */
+  padding: 10px; /* Add some padding */
+  color: white; /* Set footer text color */
+}
+
 button {
   margin-left: 10px;
   padding: 5px 10px;

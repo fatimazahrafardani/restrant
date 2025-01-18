@@ -4,6 +4,7 @@ import LouginPage from "./components/LouginPage.vue";
 import SingUpForm from "./components/SingUpForm.vue";
 import { createRouter, createWebHistory } from "vue-router";
 import UpdateRestrant from "./components/UpdateRestrant.vue";
+import RestrantList from "./components/RestrantList.vue";
 
 
 
@@ -12,6 +13,11 @@ const routes=[
         path: "/",
         name: "home",
         component: HomePage,
+        },
+        {
+            path: "/Restrant",
+            name: "RestrantList",
+            component:RestrantList,
         },
         {
             path: "/singup",
