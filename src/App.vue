@@ -1,9 +1,9 @@
 <template>
-  <div id="app" class="min-h-screen flex items-center justify-center">
+
     
     <router-view/>
     <!-- <SingUpForm /> -->
-  </div>
+
 </template>
 
 <script>
@@ -11,14 +11,15 @@
 
 export default {
   name: "App",
-  // components: {
-  //   SingUpForm,
-  // },
+  components: {
+   // SingUpForm,
+    ///https://preview.themeforest.net/item/sovy-restaurant-elementor-template-kit/full_screen_preview/29620214?_ga=2.60033453.1885605930.1737231182-1628758577.1737231182
+  },
 };
 </script>
 <style>
 /* Ensure the body and html elements cover the full viewport */
-html, body {
+ body {
 background-image: url('./assets/png.jpg');
   margin: 0; /* Remove default margin */
   background-color: black; /* Set body background color to black */

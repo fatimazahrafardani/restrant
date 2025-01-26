@@ -3,10 +3,10 @@
   <div class="home" >
    <img src="/src/assets/ana.jpg" alt=""> 
     <HeaderComponents/>
-    <header>
+    <nav>
       <h1>Welcome to My Home Page</h1>
       <p>This is a simple Vue.js home component template.</p>
-    </header>
+    </nav>
 
    
     <footer class="footer">
