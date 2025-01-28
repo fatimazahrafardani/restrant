@@ -12,7 +12,7 @@
                 <router-link to="/singup" class="nav-link">Signup</router-link>
                 <div class="dropdown-content">
                     <router-link to="/login" class="nav-link">Login</router-link>
-                    <a v-on:click="lougout" href="#">Logout</a>
+                   <div class="nav-link"> <a v-on:click="lougout" href="#">Logout</a></div>
                 </div>
                 <span class="dropdown-icon">▼</span> <!-- Changed to downward arrow -->
             </div>
@@ -54,6 +54,16 @@ export default {
 </script>
 
 <style scoped>
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+
+}
+a:hover {
+    text-decoration: underline;
+    color: #DAA760;
+    text-decoration: none;
+}
 .header {
  
     justify-content: space-between;

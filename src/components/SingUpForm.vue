@@ -1,7 +1,7 @@
 <template>
     <div class="flex-container">
       <div class="form-container">
-        <img src="../assets/pngo.png" alt="Logo" class="logo" />
+        <img src="../assets/ananadia.jpg" alt="Logo" class="logo" />
         <h1 class="title">Sign Up</h1>
         <form @submit.prevent="handleSubmit">
           <div class="input-container">
