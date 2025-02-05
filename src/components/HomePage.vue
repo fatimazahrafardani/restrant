@@ -1,20 +1,14 @@
 <template>
   <div class="home">
     <HeaderComponent />
-    
-    <!-- Hero Section -->
     <section class="hero">
-      <!-- <img src="../assets/cock.jpg" alt="" class="papper"> -->
       <div class="hero-content">
-
         <span class="subtitle">Welcome to</span>
         <h1>LUXE DINING</h1>
         <p class="tagline">A CULINARY JOURNEY OF TASTE AND ELEGANCE</p>
         <button class="primary-btn">Book A Table</button>
       </div>
     </section>
-
-    <!-- About Section -->
     <section class="about">
       <div class="container">
         <div class="about-content">
@@ -38,8 +32,6 @@
         </div>
       </div>
     </section>
-
-    <!-- Menu Preview Section -->
     <section class="menu-preview">
       <div class="container">
         <span class="section-subtitle">Our Menu</span>
@@ -74,7 +66,7 @@
           </div>
         </div>
       </div>
-    </section>
+   </section>
 
     <!-- Reservation Section -->
     <section class="reservation">
@@ -133,8 +125,6 @@ export default {
   margin: 0 auto;
   padding: 0 2rem;
 }
-
-/* Hero Section */
 .hero {
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -171,8 +161,6 @@ h1 {
   letter-spacing: 2px;
   margin-bottom: 2rem;
 }
-
-/* About Section */
 .about {
   padding: 8rem 0;
   background-color: #1a1a1a;
@@ -215,8 +203,6 @@ h2 {
   color: var(--primary-color);
   margin-bottom: 1rem;
 }
-
-/* Menu Preview Section */
 .menu-preview {
   padding: 8rem 0;
   background-color: #151515;
@@ -256,15 +242,12 @@ h2 {
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
   color: white;
 }
-
-/* Reservation Section */
 .reservation {
   padding: 8rem 0;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
               url('../assets/ana.jpg') center/cover fixed;
   text-align: center;
 }
-
 .primary-btn {
   padding: 1rem 2.5rem;
   font-size: 1.1rem;
@@ -282,8 +265,6 @@ h2 {
   background-color: #ffffff;
   transform: translateY(-2px);
 }
-
-/* Footer */
 .footer {
   background-color: #0f0f0f;
   padding: 4rem 0 2rem;

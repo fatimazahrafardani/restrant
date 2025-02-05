@@ -1,56 +1,49 @@
 {
   "users": [
     {
-      "id": "1",
-      "email": "user1@example.com",
-      "password": "password123"
+      "id": "1001",
+      "email": "john.doe@example.com",
+      "password": "securePass123"
     },
     {
-      "id": "2",
-      "email": "user2@example.com",
-      "password": "password456"
+      "id": "1002",
+      "email": "jane.smith@example.com",
+      "password": "JaneSecure456"
     },
     {
-      "id": "5fe7",
-      "email": "jhjhjh@gmail.ma",
-      "password": "yvjgjyj"
+      "id": "1003",
+      "email": "mohamed.ali@example.com",
+      "password": "AliPass789"
     },
     {
-      "id": "d87c",
-      "email": "fardani@gmail.com",
-      "password": "fardani@gmail.com"
+      "id": "1004",
+      "email": "emma.wilson@example.com",
+      "password": "WilsonPass321"
     },
     {
-      "id": "fae8",
-      "email": "farad@gmail.com",
-      "password": "jsdgjfjhhhhhhhhh"
-    },
-    {
-      "id": "6f48",
-      "email": "fardani@gmail.com",
-      "password": "fardani1234"
-    },
-    {
-      "id": "a04b",
-      "email": "fati@gmail.com",
-      "password": "0534"
-    },
-    {
-      "id": "b128",
-      "email": "fatifardani@gmail.com",
-      "password": "fati123456"
+      "id": "1005",
+      "email": "lucas.brown@example.com",
+      "password": "BrownSecure654"
     }
   ],
-  "restrant": [
+  "restaurants": [
     {
-      "id": "d6dc",
-      "contact": "0999888"
+      "id": "2001",
+      "name": "Gourmet Haven",
+      "contact": "+212600112233",
+      "address": "Rabat, Morocco"
     },
     {
-      "id": "2fa4",
-      "name": "Restraunooo",
-      "contact": "hhh",
-      "address": "temara"
+      "id": "2002",
+      "name": "Ocean Breeze Café",
+      "contact": "+212611223344",
+      "address": "Casablanca, Morocco"
+    },
+    {
+      "id": "2003",
+      "name": "Spicy Delight",
+      "contact": "+212622334455",
+      "address": "Marrakech, Morocco"
     }
   ]
 }

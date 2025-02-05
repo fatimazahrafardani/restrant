@@ -30,8 +30,6 @@
         <br>
         <p>
           <router-link to="/singup">Sign Up</router-link>
-
-
         </p>
       </div>
     </div>
@@ -57,17 +55,18 @@
             localStorage.setItem('token', result.data[0].token);
             this.$router.push({ name: 'home' });
             this.error = '';
-          } else {
+          }
+          else {
             this.error = 'Invalid credentials. Please try again.';
           }
-        } catch (error) {
+        } 
+        catch (error) {
           this.error = 'An error occurred. Please try again later.';
         }
       }
     }
   };
   </script>
-  
   <style scoped>
   * {
     margin: 0;

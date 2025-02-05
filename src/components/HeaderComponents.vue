@@ -1,46 +1,37 @@
 <template>
     <header class="header">
         <div class="logo-container">
-            <!-- <h1 class="title">Restaurant Management</h1> -->
         </div>
         <nav class="nav-bar">
-            <!-- Home Link -->
             <router-link to="/" class="nav-link">Home</router-link>
-
-            <!-- Dropdown for Signup/Login/Logout -->
-            <div class="dropdown">
-                <router-link to="/singup" class="nav-link">Signup</router-link>
-                <div class="dropdown-content">
-                    <router-link to="/login" class="nav-link">Login</router-link>
-                   <div class="nav-link"> <a v-on:click="lougout" href="#">Logout</a></div>
+                <div class="dropdown">
+                    <router-link to="/singup" class="nav-link">Signup</router-link>
+                    <div class="dropdown-content">
+                        <router-link to="/login" class="nav-link">Login</router-link>
+                    <div class="nav-link"> <a v-on:click="lougout" href="#">Logout</a></div>
+                    </div>
+                    <span class="dropdown-icon">▼</span> 
                 </div>
-                <span class="dropdown-icon">▼</span> <!-- Changed to downward arrow -->
-            </div>
-
-            <!-- Center Align the Menu Links -->
-            <div class="dropdown">
-                <router-link to="/Restrant" class="nav-link">Menu</router-link>
-                <div class="dropdown-content">
-                    <router-link to="/addrest" class="nav-link">Healthy Food</router-link>
-                    <router-link to="/addrest" class="nav-link">Jancly</router-link>
-                    <router-link to="/updaterest" class="nav-link">Dessert</router-link>
+                <div class="dropdown">
+                    <router-link to="/Restrant" class="nav-link">Menu</router-link>
+                    <div class="dropdown-content">
+                        <router-link to="/addrest" class="nav-link">Healthy Food</router-link>
+                        <router-link to="/addrest" class="nav-link">Jancly</router-link>
+                        <router-link to="/updaterest" class="nav-link">Dessert</router-link>
+                    </div>
+                    <span class="dropdown-icon">▼</span> 
                 </div>
-                <span class="dropdown-icon">▼</span> <!-- Changed to downward arrow -->
-            </div>
-
-            <!-- Dropdown for Restaurant Management -->
-            <div class="dropdown">
-                <router-link to="/Restrant" class="nav-link">Restrant</router-link>
-                <div class="dropdown-content">
-                    <router-link to="/addrest" class="nav-link">AddRestrant</router-link>
-                    <router-link to="/updaterest" class="nav-link">UpdateRestrant</router-link>
+                <div class="dropdown">
+                    <router-link to="/Restrant" class="nav-link">Restrant</router-link>
+                    <div class="dropdown-content">
+                        <router-link to="/addrest" class="nav-link">AddRestrant</router-link>
+                        <router-link to="/updaterest" class="nav-link">UpdateRestrant</router-link>
+                    </div>
+                    <span class="dropdown-icon">▼</span> 
                 </div>
-                <span class="dropdown-icon">▼</span> <!-- Changed to downward arrow -->
-            </div>
-        </nav>
+       </nav>
     </header>
 </template>
-
 <script>
 export default {
     name: 'HeaderComponents',
@@ -52,12 +43,10 @@ export default {
     }
 }
 </script>
-
 <style scoped>
 a{
     text-decoration: none;
     color: rgb(255, 255, 255);
-
 }
 a:hover {
     text-decoration: underline;
@@ -84,7 +73,7 @@ a:hover {
 
 .nav-bar {
     display: flex;
-    justify-content: center;  /* Center-align the nav links */
+    justify-content: center;  
     width: 100%;
 }
 
@@ -101,7 +90,6 @@ a:hover {
     text-decoration: none;
 }
 
-/* Dropdown Menu Styles */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -128,12 +116,10 @@ a:hover {
 .dropdown-content .nav-link:hover {
     background-color: #575757;
 }
-
-/* Dropdown Icon Style */
 .dropdown-icon {
-    font-size: 11px; /* Adjust size as needed */
+    font-size: 11px; 
     color: #DAA760;
     cursor: pointer;
-    margin-left: 5px; /* Space between link and icon */
+    margin-left: 5px; 
 }
 </style>

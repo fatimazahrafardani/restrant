@@ -3,10 +3,7 @@
       <HeaderComponents/>
       <header>
         <h1>Welcome to My Restrant Page</h1>
-       
       </header>
-  
-      <!-- Display the list of restaurants in a table -->
       <section>
         <h2>Restaurant List</h2>
         <table v-if="restaurants.length">
@@ -34,7 +31,6 @@
         </table>
         <p v-else>No restaurants available.</p>
       </section>
-  
       <footer>
         <p>&copy; 2025 Fatima Zahra Fardani. All rights reserved.</p>
       </footer>
@@ -44,7 +40,7 @@
   <script>
   import axios from 'axios';
   import HeaderComponents from './HeaderComponents.vue';
-  
+
   export default {
     name: 'HomePage',
     components: {
@@ -57,41 +53,35 @@
     },
    
     methods: {
-      // ✅ Fixed delete method with data reload
       async deleteRestaurant(id) {
         try {
           await axios.delete(`http://localhost:3000/restrant/${id}`);
           alert('Restaurant deleted successfully!');
-          this.loaddata();  // Reload the list after deletion
+          this.loaddata();
         } catch (error) {
           console.error('Error deleting restaurant:', error);
           alert('Failed to delete restaurant.');
         }
       },
-  
-      // ✅ Corrected loaddata method
       async loaddata() {
         let userData = localStorage.getItem("user data");
         if (!userData) {
           this.$router.push({ name: 'signup' });
         }
-  
         try {
           const result = await axios.get('http://localhost:3000/restrant');
           this.restaurants = result.data;
-        } catch (error) {
+        }
+        catch (error) {
           console.error('Error fetching restaurants:', error);
         }
       }
     },
-  
-    // ✅ Ensure data is loaded when the component is mounted
     async mounted() {
       await this.loaddata();
     }
   }
   </script>
-  
   <style scoped>
   button {
     margin-left: 10px;

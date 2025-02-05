@@ -7,7 +7,6 @@ import UpdateRestrant from "./components/UpdateRestrant.vue";
 import RestrantList from "./components/RestrantList.vue";
 
 
-
 const routes=[
     {
         path: "/",
@@ -39,12 +38,10 @@ const routes=[
             name: "UpdateRestrant",
             component:UpdateRestrant,
         }
-
 ];
 const router = createRouter({
     history: createWebHistory(),
     routes
-    });
+});
 
-    
-    export default router;
+export default router;

@@ -5,20 +5,15 @@
         <h1>Update Restaurant Information</h1>
         <p>Modify the details of your restaurant below.</p>
       </header>
-  
       <form @submit.prevent="updateRestaurant">
         <label for="name">Restaurant Name:</label>
         <input v-model="restaurant.name" type="text" id="name" required>
-  
         <label for="address">Address:</label>
         <input v-model="restaurant.address" type="text" id="address" required>
-  
         <label for="contact">Contact:</label>
         <input v-model="restaurant.contact" type="text" id="contact" required>
-  
         <button type="submit">Update</button>
       </form>
-  
       <footer>
         <p>&copy; 2025 Fatima Zahra Fardani. All rights reserved.</p>
       </footer>
@@ -27,7 +22,7 @@
   
   <script>
   import axios from 'axios';
-import HeaderComponents from './HeaderComponents.vue';
+  import HeaderComponents from './HeaderComponents.vue';
   
   export default {
     name: 'UpdateRestrant',
@@ -43,44 +38,34 @@ import HeaderComponents from './HeaderComponents.vue';
         }
       };
     },
-  async  mounted() {
+  async mounted() {
         let userData = localStorage.getItem("user data");
         if (!userData) {
             this.$router.push({ name: 'signup' });
-        } else {
+        } 
+        else {
             this.fetchRestaurantData();
         }
-        
-      const result = await axios.get(`http://localhost:3000/restrant/${this.$route.params.id}`);
-      this.restaurant = result.data;
+        const result = await axios.get(`http://localhost:3000/restrant/${this.$route.params.id}`);
+        this.restaurant = result.data;
     },
     methods: {
       fetchRestaurantData() {
-        // Fetch data logic can be added here
-        console.log('Fetching restaurant data...');
+           console.log('Fetching restaurant data...');
       },
-      async updateRestaurant() {
-        
-  const rst =  await axios.put(`http://localhost:3000/restrant/${this.$route.params.id}`,{
-
+      async updateRestaurant() { 
+           const rst =  await axios.put(`http://localhost:3000/restrant/${this.$route.params.id}`,{
            name: this.restaurant.name,
            contact: this.restaurant.contact,
            address: this.restaurant.address,
            })
            if (rst.status==200) {
             this.$router.push({ name: 'home' });
-        }
-           //!hhhhhhhhhhhhhhhhhhhhhh
-
-    }
-        
-
-
+           }
       }
     }
-  
+  }
   </script>
-  
   <style scoped>
   .update-restrant {
     font-family: Arial, sans-serif;

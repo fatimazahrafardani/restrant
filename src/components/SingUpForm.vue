@@ -39,9 +39,9 @@
       </div>
     </div>
   </template>
-  
   <script>
-    import axios from 'axios';
+  import axios from 'axios';
+
   export default {
     name: "SignUpForm",
     data() {
@@ -50,50 +50,42 @@
         password: "",
       };
     },
-    methods: {
-   async  handleSubmit() {
+  methods: {
+    async handleSubmit() {
         let result = axios.post('http://localhost:3000/users',{
           email: this.email,
           password: this.password,
-
         })
-        
-          if((await result).status == 201){
+        if((await result).status == 201){
             localStorage.setItem("user data",JSON.stringify((await result).data))
             this.$router.push({name:'home'})
-          }
-        
+        }
       },
-    },
-    mounted(){
+  },
+  mounted(){
       let userData = localStorage.getItem("user data")
       if(userData){
         this.$router.push({name:'home'})
-        }
-    }
+      }
+  }
   };
   </script>
-  
   <style>
-  /* Global styles */
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-  
   body {
     font-family: Arial, sans-serif;
     background-color: #f7fafc;
   }
-  
   .flex-container {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
   }
-  
   .form-container {
     background-color: #fff;
     padding: 32px;
@@ -103,7 +95,6 @@
     max-width: 400px;
     text-align: center;
   }
-  
   .logo {
     width: 80px;
     margin-bottom: 16px;
