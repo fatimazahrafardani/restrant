@@ -1,40 +1,35 @@
-.DS_Store
-node_modules
-/dist
-
-
-
-npm-debug.log*
-
-# Editor directories and files
-.idea
-.vscode
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-# Ignorer les fichiers générés par le système
+# System-generated files
 .DS_Store
 Thumbs.db
-# Ignorer les dépendances
-node_modules/
 
-# Ignorer les fichiers de configuration
-.env
-package.json
-package-lock.json
-vue.config.js
-tai
-jsconfig.json
+# Dependencies
+node_modules/
+dist/
+
+# Logs and debug files
+npm-debug.log*
 *.log
 
-# Ignorer les fichiers compilés
+# Environment and configuration files
+.env
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+tsconfig.json
+jsconfig.json
+vue.config.js
+
+# Compiled files
 *.exe
 *.dll
 *.pyc
 *.class
 
-# Ignorer les dossiers spécifiques à l'IDE
+# IDE and editor-specific files
 .vscode/
 .idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
